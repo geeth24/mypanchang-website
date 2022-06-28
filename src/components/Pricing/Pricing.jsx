@@ -14,7 +14,7 @@ export default function Pricing() {
   return (
     <Flex
       w="full"
-      bg={useColorModeValue("#F9FAFB", "gray.600")}
+      bg={useColorModeValue("gray.50", "gray.900")}
       p={50}
       alignItems="center"
       justifyContent="center"
