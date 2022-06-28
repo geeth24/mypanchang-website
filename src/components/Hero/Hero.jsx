@@ -15,7 +15,13 @@ import Mocks from "../../images/Mocks.png";
 
 const Hero = () => {
   return (
-    <Box px={8} py={24} mx="auto">
+    <Box
+      px={8}
+      py={24}
+      mx="auto"
+      id="home"
+     
+    >
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
@@ -35,7 +41,7 @@ const Hero = () => {
             w="full"
             bgClip="text"
             bgGradient="linear(to-r, #e4b84a,rgb(248,75,24))"
-            fontWeight="extrabold"
+            fontWeight="bold"
           >
             essential elements
           </Text>{" "}
