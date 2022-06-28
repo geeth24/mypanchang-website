@@ -10,7 +10,6 @@ import {
 import { FaApple, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from "react";
 
-
 const SocialButton = ({
   children,
   label,
@@ -65,6 +64,7 @@ export default function Footer() {
         >
           Rad Soft, Inc.
         </Text>
+        <Text fontSize={"sm"}>Designed by Karthik Emani</Text>
       </Container>
 
       <Box
