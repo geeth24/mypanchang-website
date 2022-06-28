@@ -15,7 +15,7 @@ import iosdev from "../../images/iosdev.svg";
 export default function About() {
   return (
     <Flex
-      bg="#F9FAFB"
+      bg={useColorModeValue("gray.50", "gray.900")}
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
