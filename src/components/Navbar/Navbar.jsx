@@ -13,12 +13,15 @@ import {
   IconButton,
   CloseButton,
   Link as ChakraLink,
+  useColorMode,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 export default function Navbar() {
   const bg = useColorModeValue("white", "gray.800");
+  const { colorMode, toggleColorMode } = useColorMode();
   const mobileNav = useDisclosure();
 
   return (
@@ -49,6 +52,14 @@ export default function Navbar() {
               ml="2"
               bgClip="text"
               bgGradient="linear(to-r, #e4b84a,rgb(248,75,24))"
+              as={Link}
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              onClick={mobileNav.onClose}
+              cursor="pointer"
             >
               MyPanchang
             </chakra.h1>
@@ -60,48 +71,76 @@ export default function Navbar() {
               color="orange"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Link
+              <Button
+                w="full"
+                variant="ghost"
+                as={Link}
                 to="about"
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-70}
+                onClick={mobileNav.onClose}
+                cursor="pointer"
               >
-                <Button w="full" variant="ghost">
-                  About
-                </Button>
-              </Link>
-              <Link
+                About
+              </Button>
+              <Button
+                w="full"
+                variant="ghost"
+                as={Link}
                 to="features"
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-70}
+                onClick={mobileNav.onClose}
+                cursor="pointer"
               >
-                <Button w="full" variant="ghost">
-                  Features
-                </Button>
-              </Link>
-              <Link
+                Features
+              </Button>
+              <Button
+                w="full"
+                variant="ghost"
+                as={Link}
                 to="pricing"
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-70}
+                onClick={mobileNav.onClose}
+                cursor="pointer"
               >
-                <Button w="full" variant="ghost">
-                  Pricing
+                Pricing
+              </Button>
+
+              <Button
+                w="full"
+                variant="ghost"
+                as={ChakraLink}
+                href="https://apps.apple.com/us/app/mypanchang/id1567820028"
+                onClick={mobileNav.onClose}
+                cursor="pointer"
+              >
+                Download
+              </Button>
+            </HStack>
+            <HStack spacing={1} mr={1}>
+              <Link href="https://radsoftinc.com/contact">
+                <Button colorScheme="orange" size="sm">
+                  Support
                 </Button>
               </Link>
-              <ChakraLink href="https://apps.apple.com/us/app/mypanchang/id1567820028">
-                <Button w="full" variant="ghost">
-                  Download
-                </Button>
-              </ChakraLink>
+              <IconButton
+                colorScheme="orange"
+                icon={
+                  colorMode === "light" ? <BsFillMoonFill /> : <BsFillSunFill />
+                }
+                onClick={toggleColorMode}
+                aria-label={""}
+                size="sm"
+              />
             </HStack>
-            <Link href="https://radsoftinc.com/contact">
-              <Button colorScheme="orange">Support</Button>
-            </Link>
             <Box display={{ base: "inline-flex", md: "none" }}>
               <IconButton
                 display={{ base: "flex", md: "none" }}
@@ -133,57 +172,59 @@ export default function Navbar() {
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-                <Link
+                <Button
+                  w="full"
+                  variant="ghost"
+                  as={Link}
                   to="about"
                   smooth={true}
                   duration={500}
                   spy={true}
                   offset={-70}
                   onClick={mobileNav.onClose}
+                  cursor="pointer"
                 >
-                  <Button w="full" variant="ghost">
-                    About
-                  </Button>
-                </Link>
-                <Link
+                  About
+                </Button>
+                <Button
+                  w="full"
+                  variant="ghost"
+                  as={Link}
                   to="features"
                   smooth={true}
                   duration={500}
                   spy={true}
                   offset={-70}
                   onClick={mobileNav.onClose}
+                  cursor="pointer"
                 >
-                  <Button w="full" variant="ghost">
-                    Features
-                  </Button>
-                </Link>
-                <Link
+                  Features
+                </Button>
+                <Button
+                  w="full"
+                  variant="ghost"
+                  as={Link}
                   to="pricing"
                   smooth={true}
                   duration={500}
                   spy={true}
                   offset={-70}
                   onClick={mobileNav.onClose}
+                  cursor="pointer"
                 >
-                  <Button w="full" variant="ghost">
-                    Pricing
-                  </Button>
-                </Link>
-                <ChakraLink
+                  Pricing
+                </Button>
+
+                <Button
+                  w="full"
+                  variant="ghost"
+                  as={ChakraLink}
                   href="https://apps.apple.com/us/app/mypanchang/id1567820028"
                   onClick={mobileNav.onClose}
+                  cursor="pointer"
                 >
-                  <Button w="full" variant="ghost">
-                    Download
-                  </Button>
-                </ChakraLink>
-
-                <Link
-                  href="https://radsoftinc.com/contact"
-                  onClick={mobileNav.onClose}
-                >
-                  <Button colorScheme="orange">Support</Button>
-                </Link>
+                  Download
+                </Button>
               </VStack>
             </Box>
           </HStack>
