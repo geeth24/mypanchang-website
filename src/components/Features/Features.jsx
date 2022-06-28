@@ -53,7 +53,7 @@ export default function Features() {
   return (
     <Box
       shadow="xl"
-      bg={useColorModeValue("#ffffff", "gray.600")}
+      bg={useColorModeValue("white", "gray.800")}
       px={8}
       py={20}
       mx="auto"
@@ -68,7 +68,6 @@ export default function Features() {
       >
         <Box alignSelf="start">
           <chakra.h2
-            color={useColorModeValue("brand.500")}
             fontWeight="semibold"
             textTransform="uppercase"
             letterSpacing="wide"
