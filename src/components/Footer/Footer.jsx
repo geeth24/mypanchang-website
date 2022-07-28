@@ -64,7 +64,7 @@ export default function Footer() {
         >
           Rad Soft, Inc.
         </Text>
-        <Text fontSize={"sm"}>Designed by Karthik Emani</Text>
+        <Text fontSize={"sm"}>Designed by Geeth Gunnampalli & Karthik Emani</Text>
       </Container>
 
       <Box
