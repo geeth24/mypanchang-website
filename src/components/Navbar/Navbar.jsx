@@ -48,10 +48,10 @@ export default function Navbar() {
             </chakra.a>
             <chakra.h1
               fontSize="xl"
-              fontWeight="medium"
+              fontWeight="black"
               ml="2"
               bgClip="text"
-              bgGradient="linear(to-r, #e4b84a,rgb(248,75,24))"
+              bgGradient="linear(to-r, #F1BD73,#0587B1)"
               as={Link}
               to="home"
               smooth={true}
@@ -68,7 +68,7 @@ export default function Navbar() {
             <HStack
               spacing={1}
               mr={1}
-              color="orange"
+              color="#0587B1"
               display={{ base: "none", md: "inline-flex" }}
             >
               <Button
@@ -126,13 +126,20 @@ export default function Navbar() {
               </Button>
             </HStack>
             <HStack spacing={1} mr={1}>
-              <Link href="https://radsoftinc.com/contact">
-                <Button colorScheme="orange" size="sm">
-                  Support
-                </Button>
-              </Link>
+              <Button
+                as="a"
+                href="https://radsoftinc.com/contact"
+                bg="#0587B1"
+                color="white"
+                _hover={{ bg: "#0587B1", color: "white" }}
+                size="sm"
+              >
+                Support
+              </Button>
               <IconButton
-                colorScheme="orange"
+                bg="#0587B1"
+                color="white"
+                _hover={{ bg: "#0587B1", color: "white" }}
                 icon={
                   colorMode === "light" ? <BsFillMoonFill /> : <BsFillSunFill />
                 }
@@ -166,7 +173,7 @@ export default function Navbar() {
                 spacing={3}
                 rounded="sm"
                 shadow="sm"
-                color="orange"
+                color="#0587B1"
               >
                 <CloseButton
                   aria-label="Close menu"

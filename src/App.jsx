@@ -1,20 +1,17 @@
-import About from "./components/About/About";
-import Features from "./components/Features/Features";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import Pricing from "./components/Pricing/Pricing";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Privacy from "./Privacy";
 
 function App() {
+
+
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Features />
-      <Pricing />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacypolicy" element={<Privacy />} />
+      </Routes>
+    </Router>
   );
 }
 

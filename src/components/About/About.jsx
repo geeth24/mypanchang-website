@@ -26,7 +26,7 @@ export default function About() {
           <Stack spacing={4}>
             <Text
               textTransform={"uppercase"}
-              color={"#f84c18"}
+              color={"#0587B1"}
               fontWeight={600}
               fontSize={"sm"}
               p={2}

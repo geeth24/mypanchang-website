@@ -77,7 +77,8 @@ export default function Pricing() {
                 fontWeight="bold"
                 rounded="md"
                 shadow="md"
-                colorScheme="orange"
+                color="#0587B1"
+                borderColor="#0587B1"
                 variant="outline"
                 href="https://apps.apple.com/us/app/mypanchang/id1567820028"
               >
@@ -95,7 +96,10 @@ export default function Pricing() {
                   fontWeight="bold"
                   rounded="md"
                   shadow="md"
-                  colorScheme="orange"
+                  bg="#0587B1"
+                  color="white"
+                  _hover={{ bg: "#0587B1", color: "white" }}
+
                 >
                   Support
                 </Button>

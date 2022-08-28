@@ -58,13 +58,15 @@ export default function Footer() {
       >
         <Text
           bgClip="text"
-          bgGradient="linear(to-r, #e4b84a,rgb(248,75,24))"
+          bgGradient="linear(to-r, #F1BD73,#0587B1)"
           fontWeight="extrabold"
           fontSize={"2xl"}
         >
           Rad Soft, Inc.
         </Text>
-        <Text fontSize={"sm"}>Designed by Geeth Gunnampalli & Karthik Emani</Text>
+        <Text fontSize={"sm"}>
+          Designed by Geeth Gunnampalli
+        </Text>
       </Container>
 
       <Box
