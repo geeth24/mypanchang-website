@@ -2,16 +2,20 @@ import { Box } from '@chakra-ui/react'
 import React from 'react'
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import './Privacy.css'
 
 function Privacy() {
   return (
     <>
     <Navbar />
-  <Box p={6}>
+  <Box p={6}
+   color="#0587B1!important"
+>
    
 
-  <div data-custom-class="body">
-    <div>
+  <div data-custom-class="body"
+  >
+    <div   >
       <strong>
         <span style={{ fontSize: 26 }}>
           <span data-custom-class="title">PRIVACY NOTICE</span>
